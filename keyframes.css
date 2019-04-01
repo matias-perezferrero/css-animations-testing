@@ -1,0 +1,69 @@
+body {
+  background-color: #333;
+}
+
+.box {
+  background: white;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation-name: myanimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  transition-timing-function: ease;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: white;
+    border-radius: 0 0 0 0;
+    transform: rotate(0deg);
+    left: 200px;
+    top: 200px;
+    opacity: 1;
+  }
+  25% {
+    background-color: red;
+    transform: rotate(90deg);
+    border-radius: 50% 0 0 0;
+    left: 400px;
+    top: 200px;
+    opacity: 0.75;
+  }
+  50% {
+    background-color: fuchsia;
+    transform: rotate(180deg);
+    border-radius: 50% 50% 0 0;
+    left: 600px;
+    top: 200px;
+    opacity: 0.5;
+  }
+  75% {
+    background-color: blue;
+    transform: rotate(270deg);
+    border-radius: 50% 50% 50% 0;
+    left: 800px;
+    top: 200px;
+    opacity: 0.25;
+  }
+  100% {
+    background-color: black;
+    transform: rotate(360deg);
+    border-radius: 50% 50% 50% 50%;
+    left: 1000px;
+    top: 200px;
+    opacity: 0;
+  }
+}
+
+.box:hover {
+  color: cyan;
+  font-size: 5em;
+}
